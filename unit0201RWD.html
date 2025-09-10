@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Time(RWD)</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0px;;
+        }
+
+        nav{
+            background-color: maroon;
+        }
+
+      
+
+        nav ul{
+            list-style-type: none;
+            margin: 0px;
+            display: inline-flex;
+        }
+
+        nav a{
+            color: lightgoldenrodyellow;
+            text-decoration: none;
+        }
+
+        nav li{
+            padding: 0.8vw;
+        }
+
+        nav li:hover{
+            background-color:blueviolet;
+        }
+
+        nav ul:nth-child(2){
+            float: right;
+        }
+
+        header{
+                width: 100%;
+                height: 25vh;
+                /*background-color: brown;*/
+                background-image: url('images/coffee08.jpg');
+                background-size: cover;
+                
+                display: flex;  /*設定為flexbox*/
+                justify-content: center;
+                align-items: center;
+        }
+
+        h1{
+            color: beige;
+            font-size: 5rem;
+        }
+
+        /* cell phone*/
+        /* 屬性選擇器 attribute selector, 使用[]括住*/
+        [class *='col-']{
+            width: 100%;
+            float: left;
+            padding: 1.5vw;
+        }
+
+        /*類別選擇器 class selector ,以「.」 為開頭*/
+        /* tablet */
+        @media only screen and (min-width:992px) {
+            .col-m-1{width: 8.33%; }
+            .col-m-2{width: 16.67%; }
+            .col-m-3{width: 25.00%; }
+            .col-m-4{width: 33.33%; }
+            .col-m-5{width: 41.67%; }
+            .col-m-6{width: 50.00%; }
+            .col-m-7{width: 58.33%; }
+            .col-m-8{width: 66.67%; }
+            .col-m-9{width: 75.00%; }
+            .col-m-10{width: 83.33%; }
+            .col-m-11{width: 91.67%; }
+            .col-m-12{width: 100.00%; }
+        }
+
+        /* pc */
+        @media only screen and (min-width:1200px) {
+            .col-1{width: 8.33%; }
+            .col-2{width: 16.67%; }
+            .col-3{width: 25.00%; }
+            .col-4{width: 33.33%; }
+            .col-5{width: 41.67%; }
+            .col-6{width: 50.00%; }
+            .col-7{width: 58.33%; }
+            .col-8{width: 66.67%; }
+            .col-9{width: 75.00%; }
+            .col-10{width: 83.33%; }
+            .col-11{width: 91.67%; }
+            .col-12{width: 100.00%; }
+        }
+
+
+        menu ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        menu li{
+            padding: 8px;
+            border-bottom: 1px burlywood solid;
+            margin-bottom: 8px;
+        }
+
+        menu li a{
+            text-decoration: none;
+            color: red;
+        }
+
+         menu li:hover{
+           background-color: brown;
+        }
+
+        menu iframe{
+            border-radius: 8px;
+        }
+
+        #bean{
+            width: 100%;
+        }
+
+        iframe{
+            width: 100%;
+            height: 45vh;
+            border: none;
+            overflow: auto;
+        }
+
+
+        /* footer{
+           clear: both;
+        } */
+
+          footer{
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            background-color: lightgrey;
+            color:gray;
+            width: 100%;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 導覽列 -->
+    <nav>
+       <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">SERVICE</a></li>
+             <li><a href="#">INFO</a></li>
+       </ul>
+
+       <ul>
+            <li>
+                <a href="login.html" target="coffeeFrame">LOGIN<a>
+            </li>
+       </ul>
+    </nav>
+
+    <!--標頭區-->
+    <header>
+        <h1 id="myh">Welcome to Cafe Time</h1>
+    </header>
+
+
+    <!--主要內容區-->
+    <nain>
+        <!--選單區-->
+        <menu class="col-3 col-m-4">
+            <ul>
+            <li><a href="coffee1.html" target="coffeeFrame">咖啡的歷史起源</a></li>
+            <li><a href="coffee2.html" target="coffeeFrame">咖啡樹的品種</a></li>
+            <li><a href="coffee3.html" target="coffeeFrame">咖啡的栽培條件</a></li>
+            <li><a href="coffee4.html" target="coffeeFrame">咖啡豆的成分</a></li>
+       </ul>
+
+       <audio controls="">
+            <source src="sounds/baha.mp3" type="audio/mpeg">
+       </audio>
+
+       <video controls="" style="width: 100%; border-radius: 8px;">
+        <source src="videos/coffee2.mp4" type="video/mp4">
+       </video>
+
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/-BjfCZUdYFw?si=McJ9L0t1NPmIxtMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </menu>
+
+        <!--內容顯示區-->
+        <div  class="col-6 col-m-8">
+            <iframe name="coffeeFrame" src="coffee1.html">
+
+            </iframe>
+            
+        </div>
+
+        <!--廣告、文章分享或公告-->
+        <article  class="col-3 col-m-12">
+            <picture>
+                <source srcset="images/bean5.png" media="(max-width:991px)">
+                 <source srcset="images/arabica.png" media="(max-width:1199px)">
+                 <img src="images/bean3.png" id="bean">
+            </picture>
+            
+        </article>
+
+    </nain>
+
+    <!--頁尾-->
+       <footer>
+        2025 版權所有 | 翻拷必究 
+    </footer>
+
+</body>
+</html>

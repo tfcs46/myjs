@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG and CSS</title>
+
+  <style>
+    .circle{
+      fill:bisque;
+      stroke:aquamarine;
+      stroke-width: 8;
+      opacity: 0.7;
+      transition: fill 2.0s ease;
+    }
+
+    .circle:hover{
+      fill:green;
+    }
+  </style>
+</head>
+<body>
+ <svg width="500" height = "500" xmlns = "http://www.w3.org/2000/svg">
+    <circle cx = "250" cy ="250" r="100"  class="circle"/>
+  </svg>
+
+  
+</body>
+
+<script>
+   const svg = document.getElementById('mysvg');
+   const circle= document.createElementNS('http://www.w3.org/2000/svg','circle');
+
+   circle.setAttribute('cx','250');
+   circle.setAttribute('cy','250');
+   circle.setAttribute('r','100');
+   circle.setAttribute('fill','pink');
+   circle.setAttribute('stroke','lightblue');
+   circle.setAttribute('stroke-width','10');
+
+   svg.appendChild(circle);
+
+   let x = 50;
+
+   function animate(){
+    x +=2;
+    circle.setAttribute('cx',x);
+    if(x<800){
+      requestAnimationFrame(animate);
+    }
+   }
+
+   animate();
+
+</script>
+
+</html>

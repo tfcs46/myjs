@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript function</title>
+
+</head>
+<body>
+  <div id = "demo1"></div>
+  <div id = "demo2"></div>
+  <div id = "demo3"></div>
+  <div id = "demo4"></div>
+  
+
+  <script>
+    const demo1 = document.getElementById('demo1');
+    const demo2 = document.getElementById('demo2');
+    const demo3 = document.getElementById('demo3');
+    const demo4 = document.getElementById('demo4');
+
+    var myfun = () =>{
+      demo1.innerHTML='我最愛的咖啡是卡布奇諾!!'
+    }
+    myfun();
+
+    var yourfun = (name, coffee) =>{
+      demo2.innerHTML= name+',您最愛的咖啡是 '+coffee;
+    }
+    yourfun('曾艾荷','Latte');
+
+    var hisfun = () =>"在忙也要陪你喝一杯咖啡";
+    demo3.innerHTML =hisfun();
+
+    //var herfun = (price, qty) =>"咖啡價格:"+price+"元，數量:" +qty+"杯，總計:"+(price*qty)+"元";
+
+    var herfun = (price, qty) =>`咖啡價格:${price}元，數量:${qty}杯，總計:${price*qty}元`;
+
+    demo4.innerHTML =herfun(120,10);
+
+
+  </script>
+ 
+</body>
+</html>

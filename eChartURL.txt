@@ -1,0 +1,1 @@
+https://cdnjs.cloudflare.com/ajax/libs/echarts/6.0.0/echarts.min.js

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript function(expection)</title>
+
+
+</head>
+<body>
+  <h1>Javascript async and await</h1>
+  <hr>
+
+  <script>
+   async function fetchGovData(){
+    try{
+        let response= await fetch('https://apiservice.mol.gov.tw/OdService/download/A17000000J-030243-YTl');
+
+        let data = await response.json();
+
+        console.log(data);
+
+        document.write('擷取資料成功');
+    }
+    catch(error){
+      console.error("Error:",error);
+    }
+   }
+
+   fetchGovData();
+
+  </script>
+ 
+</body>
+</html>

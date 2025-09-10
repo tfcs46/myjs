@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://codepen.io/GreenSock/pen/xxmzBrw/fcaef74061bb7a76e5263dfc076c363e.css" rel="stylesheet" type="text/css"> -->
+    <title>自訂元件 custom picker color</title>
+
+
+</head>
+<body>
+  <!-- <custom-button></custom-button> -->
+   <color-picker></color-picker>
+  
+  <script>
+    class PickerColor extends HTMLElement{
+
+      constructor(){
+        super();
+
+        this.attachShadow({mode:'open'})
+
+      
+        
+      }
+
+      connectedCallback(){
+        const saveColor = localStorage.getItem('color') || '#000000';
+        this.shadowRoot.innerHTML=`
+          <input type = "color" value="${saveColor}">
+        `;
+
+        this.shadowRoot.querySelector('input').addEventListener('input', (e)=>{
+          localStorage.setItem('color',e.target.value);
+        })
+
+      }
+
+
+    }
+
+    customElements.define('color-picker',PickerColor);
+
+  </script>
+  
+
+   
+</body>
+
+<script>
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/echarts/6.0.0/echarts.min.js"></script>
+    <title>Chart.js Bar Chart</title>
+
+  <style>
+  /* html, body {
+    height: 100%;
+    margin: 0;
+  } */
+  </style>
+</head>
+<body style="height: 100%; margin: 0;">
+
+<div id="container" style="width: 100%; height: 100%; border: 1px solid red;"></div>
+
+<script type="text/javascript">
+var dom = document.getElementById('container');
+
+var myChart = echarts.init(dom,null,{
+  renderer:'canvas',
+  useDirtyRect:false,
+
+});
+
+var app ={};
+
+var option;
+
+
+
+
+option = {
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [120, 200, 150, 80, 70, 110, 130],
+      type: 'bar',
+     itemStyle: {
+        color: '#9966FF' // 小寫的 color
+      },
+      showBackground: true,
+      backgroundStyle: {
+        color: 'rgba(255,200,185,0.35)' // 小寫的 color
+      }
+      
+    }
+  ]
+};
+
+if(option && typeof option ==='object'){
+  myChart.setOption(option);
+}
+
+window.addEventListener('resize',myChart.resize);
+
+
+
+</script>
+  
+</body>
+
+
+
+</html>

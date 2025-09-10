@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Canvas text and Image Apply</title>
+
+  <style>
+ 
+  </style>
+</head>
+<body>
+  <button id = "slogan">Show Slogan</button>
+  <button id = "image">Show Image</button>
+  <hr>
+  <canvas id = "txtCanvas" width = "500" height="75"></canvas>
+  <br>
+  <canvas id = "imgCanvas" width = "500" height="500"></canvas>
+
+</body>
+
+<script>
+    document.getElementById('slogan').addEventListener('click',function(){
+      const canvas = document.getElementById('txtCanvas');
+      const ctx= canvas.getContext('2d');
+      ctx.font = '24px Arial';
+      ctx.fillStyle = 'green';
+      ctx.fillText('再忙也要陪你喝一杯咖啡',50,50);
+    });
+
+
+       document.getElementById('image').addEventListener('click',function(){
+      const canvas = document.getElementById('imgCanvas');
+      const ctx= canvas.getContext('2d');
+      const img = new Image();
+      img.onload= () =>{
+        ctx.drawImage(img,0,0,500,500);
+      }
+      img.src = 'images/drink/1.jpg';
+     
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://codepen.io/GreenSock/pen/xxmzBrw/fcaef74061bb7a76e5263dfc076c363e.css" rel="stylesheet" type="text/css"> -->
+    <title>自訂元件 custom button</button></title>
+
+
+</head>
+<body>
+  <custom-button></custom-button>
+  
+  <script>
+    class MyButton extends HTMLElement{
+
+      constructor(){
+        super();
+
+        const shadow = this.attachShadow({mode:'open'})
+
+        shadow.innerHTML=`
+        
+          <style>
+            button{
+              background-color: pink;
+              color: red;
+              border: none;
+              padding: 15px 25px;
+              cursor: pointer;
+              border-radius: 8px;
+            }
+
+
+            button:hover{
+                background-color:darkmagenta;
+                color:white;
+            }
+          </style>
+            <button>預購從速</button>
+        
+        `;
+        
+      }
+
+    }
+
+    customElements.define('custom-button',MyButton);
+
+  </script>
+  
+
+   
+</body>
+
+<script>
+
+
+
+</script>
+
+</html>

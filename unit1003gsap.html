@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://codepen.io/GreenSock/pen/xxmzBrw/fcaef74061bb7a76e5263dfc076c363e.css" rel="stylesheet" type="text/css">
+    <title>GSAP</title>
+
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+
+    #a{
+      background-color: aquamarine;  
+    }
+
+     #b{
+      background-color:bisque;  
+    }
+
+     #c{
+      background-color:blueviolet;  
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="a"></div>
+  <div id="b"></div>
+  <div id="c"></div>
+
+
+    <script type="text/javascript">
+      var tl = gsap.timeline({repeat: 2, repeatDelay: 1});
+      tl.to("#a", {x: 100, duration: 1});
+      tl.to("#b", {y: 50, duration: 1});
+      tl.to("#c", {opacity: 0, duration: 1});
+
+    </script>
+  
+</body>
+
+</html>

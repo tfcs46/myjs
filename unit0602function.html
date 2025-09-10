@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Javascript function</title>
+
+    <style>
+    
+      *{
+        box-sizing: border-box;
+      }
+
+
+      div{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.25rem;
+
+        border: 3px transparent solid;
+        transition: transform 1.0s ease-in-out , border 1.0s ease-in;
+      }
+
+      div:hover{
+        border: 3px gold solid;
+        transform: scale(1.2);
+      }
+
+      div:nth-of-type(1){
+        background-image: url(images/drink/1.jpg);
+      }
+
+        div:nth-of-type(2){
+        background-image: url(images/drink/2.jpg);
+      }
+
+        div:nth-of-type(3){
+        background-image: url(images/drink/3.jpg);
+      }
+
+        div:nth-of-type(4){
+        background-image: url(images/drink/4.jpg);
+      }
+
+      span{
+        background-color: beige;
+        color: brown;
+        border-radius: 25px;
+        padding: 0.8rem;
+      }
+
+      span:hover{
+        background-color: gold;
+        cursor: pointer;
+      }
+
+      p{
+        display: inline-flex;
+        width: 200px;
+        margin: 1.25rem;
+      }
+
+    </style>
+
+</head>
+<body>
+  <h1>函數的四種基本狀態</h1>
+  <hr>
+  <div><span onclick="myfun()">無參數，無回傳值</span></div>
+  <div><span onclick="yourfun('艾扣扣',10)">有參數，無回傳值</span></div>
+  <div><span onclick="document.querySelector('p:nth-of-type(3)').innerHTML =hisfun()">無參數，有回傳值</span></div>
+  <div><span onclick="document.querySelector('p:nth-of-type(4)').innerHTML =herfun('艾呆丸',20)">有參數，有回傳值</span></div>
+  <hr>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <script>
+    function myfun(){
+      document.querySelector('p:nth-of-type(1)').innerHTML = '美式咖啡，買一送一';
+    }
+
+    function yourfun(name, qty){
+      document.querySelector('p:nth-of-type(2)').innerHTML = name+'訂購'+qty+' 杯拿鐵';
+    }
+
+    function hisfun(){
+      return "拿鐵，香醇可口";
+    }
+
+    function herfun(name, qty){
+      var price = 120;
+      var total = price*qty;
+      var str = name +" 訂購 "+qty + " 杯咖啡，總計為"+ total +" 元";
+
+      return str;
+    }
+
+  </script>
+ 
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript SVG set Attribute</title>
+
+  <style>
+ 
+  </style>
+</head>
+<body>
+  <svg id="mysvg" width="500" height = "500" xmlns = "http://www.w3.org/2000/svg">
+    
+  </svg>
+
+  
+</body>
+
+<script>
+   const svg = document.getElementById('mysvg');
+   const circle= document.createElementNS('http://www.w3.org/2000/svg','circle');
+
+   circle.setAttribute('cx','250');
+   circle.setAttribute('cy','250');
+   circle.setAttribute('r','150');
+   circle.setAttribute('fill','pink');
+   circle.setAttribute('stroke','lightblue');
+   circle.setAttribute('stroke-width','10');
+
+   svg.appendChild(circle);
+
+   let x = 50;
+
+   function animate(){
+    x +=2;
+    circle.setAttribute('cx',x);
+    if(x<800){
+      requestAnimationFrame(animate);
+    }
+   }
+
+   animate();
+
+</script>
+
+</html>

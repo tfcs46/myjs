@@ -1,0 +1,57 @@
+  const data = [
+            { letter: "A", frequency: 0.08167 },
+            { letter: "B", frequency: 0.01492 },
+            { letter: "C", frequency: 0.02782 },
+            { letter: "D", frequency: 0.04253 },
+            { letter: "E", frequency: 0.12702 },
+            { letter: "F", frequency: 0.02228 },
+            { letter: "G", frequency: 0.02015 },
+            { letter: "H", frequency: 0.06094 },
+            { letter: "I", frequency: 0.06966 },
+            { letter: "J", frequency: 0.00153 },
+            { letter: "K", frequency: 0.00772 },
+            { letter: "L", frequency: 0.04025 },
+            { letter: "M", frequency: 0.02406 },
+            { letter: "N", frequency: 0.06749 },
+            { letter: "O", frequency: 0.07507 },
+            { letter: "P", frequency: 0.01929 },
+            { letter: "Q", frequency: 0.00095 },
+            { letter: "R", frequency: 0.05987 },
+            { letter: "S", frequency: 0.06327 },
+            { letter: "T", frequency: 0.09056 },
+            { letter: "U", frequency: 0.02758 },
+            { letter: "V", frequency: 0.00978 },
+            { letter: "W", frequency: 0.02360 },
+            { letter: "X", frequency: 0.00150 },
+            { letter: "Y", frequency: 0.01974 },
+            { letter: "Z", frequency: 0.00074 }
+        ];
+
+
+
+---------------------------------------------------
+
+const data = {
+            labels: ['一月', '二月', '三月', '四月', '五月', '六月'],
+            datasets: [{
+                label: '銷售量',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };

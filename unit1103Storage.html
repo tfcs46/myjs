@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://codepen.io/GreenSock/pen/xxmzBrw/fcaef74061bb7a76e5263dfc076c363e.css" rel="stylesheet" type="text/css"> -->
+    <title>Js SessionStorage</title>
+
+  <style>
+  
+  </style>
+</head>
+<body>
+
+  <input type="number" id="temp" placeholder="Enter Temperature"><br>
+  <input type="number" id="humidity" placeholder="Enter Humidity"><br>
+  <button onclick="setData()" >SET</button>
+  <button onclick="getData()" >GET</button>
+  <button onclick="myClear()">CLEAR</button>
+  <div id = "demo"></div>
+
+  <a href="unit1104Storage.html">Show sessionStorage Data</a>
+
+  <script>
+
+    function setData(){
+      window.sessionStorage.setItem('temp',temp.value);
+      window.sessionStorage.setItem('humidity',humidity.value);
+      window.alert('sessionStorage SET OK!!')
+    }
+
+
+     function getData(){
+      var t=window.sessionStorage.getItem('temp');
+      var h=window.sessionStorage.getItem('humidity');
+     demo.innerHTML = `溫度:${t}<br>
+     濕度:${h}<br>
+     `
+    }
+
+    function myClear(){
+      window.sessionStorage.clear();
+      window.alert("localStorage Clear OK!")
+    }
+  </script>
+  
+
+   
+</body>
+
+<script>
+
+
+
+</script>
+
+</html>

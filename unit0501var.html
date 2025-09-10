@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>JS varable</title>
+
+</head>
+<body>
+
+  <script>
+    var name = '';
+    var height = 0.0;
+    var weight = 0.0;
+    var gender = "";
+    var marriage = false;
+
+    name = '艾呆丸';
+    height = 170.5;
+    weight = 60.4;
+    gender = '男';
+    marriage = true;
+
+    var emp = {
+      no:1,
+      name:'花不丸',
+      h:175.5,
+      w:65.0,
+      gender:'女',
+      marriage:false
+    }
+
+    document.write("<h1>BSNET Employee Health Management System</h1>");
+    document.write("<hr>");
+    document.write("姓名:"+name+"<br>");
+    document.write("身高:"+height+" cm<br>");
+    document.write("體重:"+weight+" kg<br>");
+    document.write("性別:"+gender+"<br>");
+    document.write("婚姻:"+marriage+"<br>");
+
+
+    document.write("<br><h1>BSNET Employee Health Management System</h1>");
+    document.write("<hr>");
+    document.write("姓名:"+emp.name+"<br>");
+    document.write("身高:"+emp.h+" cm<br>");
+    document.write("體重:"+emp.w+" kg<br>");
+    document.write("性別:"+emp.gender+"<br>");
+    document.write("婚姻:"+emp.marriage+"<br>");
+    
+    emp = null;
+    // document.write("姓名:"+emp.name+"<br>");
+    document.write("~~End~~~");
+
+  </script>
+ 
+</body>
+</html>
